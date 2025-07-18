@@ -32,7 +32,8 @@ function transformStateWithClones(state, actions) {
         // Nieznany typ akcji - nic nie zmieniamy
         break;
     }
-    history.push(currentState);
+    history.push({ ...currentState });
+
   }
 
   return history;
